@@ -61,13 +61,6 @@ UCoin funcionará bajo las siguientes características:
 4. ***Ecalado de Capa 2***. Es una solución de escalado de capa en donde las transacciones y procesos de blockchaoin pueden tener lugar independientemente de la capa 1 (la cadena principal), generando como ventaja usar soluciones fuera de la cadena principal sin generar un cambio estructural pues la capa 2 es agregada como capa adicional. Aquí gran parte de las trasnacciones que pasan por la capa 1 se transladan a la capa 2 en donde se realiza la prueba de concenso. La idea aquí es utilizar Zero Knowledge Rollups (ZK-Rollups). Estos ZK Rollups son smart contracts que escalan la red de Ehereum procesando multiples transferencias fuera de la cadena de blockchain principal y combinandolas en una sola transacción alcanzando un throughput de 2000 TPM (transacciones por segundo). Los Rollups de conocimiento cero retienen fondos en un smart contract y, una vez que se acepta la prueba de validez, las transacciones se confirman y los fondos están disponibles. El conocimiento cero significa que todos los verificadores pueden saber que tienen la misma información, sin que esta se revele.
 
 
-# **Retos**
-- Escalabilidad.
-- Usabilidad. 
-- Educación en criptomonedas Y desconfianza en una moneda nueva.
-- Integración transparente con el sistema financiero tradiciona (SWAP)
-
-
 # **Implementación**
 La implementación de UCoin puede llevarse a cabo sobre la red de Polygon (Matic), soportándose en Polygon Edge qué es un framework modular y extensible para la construcción de redes privadas o pública compatibles con Ethereum. 
 
@@ -185,13 +178,33 @@ Implementa la interface con el el modulo de blockchain a través de:
   - Minimal. funciona como un hub de interconexión entre todos los módulos de polygon.
   - Storage. Utiliza LevelDB para almancenamiento de Datos y almacen de datos en memoria. Esta es una capa de abstracción que permita realizar consultas y persistenca a nviel de BD.
   
+##  **Atributos de Calidad**
+- **Escalabilidad**. Para resolver el problema de escalabilidad dentro de la plataforma de Polygon se puede utilizar Polygon Zero, una iniciativa que aúnque aún se encuentra en desarrollo, es funcional. Bajo este componente se transalada a una capa de Nodos PolygonZero las trasacciones en batch. Una vez estas son agreadas, polygon zero tranfiere el bloque a la capa 2 en donde se aplica el método de concenso que son agregados en bloques de pruebas que son generados en paralelo para ser enviados finalmente a la capa 1 de Ethereum. El siguiente gráfico muestra el proceso.
+![image](Zero_Arch_b4c9ed0ad7.avif)
+
+- **Usabilidad**. El modelo está en capacidad de emitir tokens directamente colateralizados para realizar operaciones de:
+  - Prestamos de diferentes tipos.
+  - Pagos
+  - Envíos y Recepeciones
+  - Intercambio a través de la conexión off-chain ofrecida por la red de Ethereum.
+  - Staking, LPL, prestamos P2P.
+
+- **Desempeño**. El módulo de Polygon Zero alcanza a generar hasta pruebas ZK en 170ms con un tamaño de 45kb en modo optimizado. Cada nodo en Polygon Zero es capaz de procesar hasta 100TPS. Un bloque logra crease en 2 segundos con mas de 10 validadores.
+
+# **Desafios/Retos**
+- Mantenimiento de la paridad con el dolar. Selección del método de balanceo.
 
 # **Métricas**
 - Transacciones por Minuto.
-- 
+- Número de Bloques creados por Nodo. 
+- Nivel de staking
+- Capitalización de la moneda
+- Tiempo medio de txn.
+  
 
 # **Riesgos**
-- Seguridad
+- Seguridad. JSON-RPC.
+
 
 # **Términos y Conceptos**
 ### - **Qué es una moneda estable?**
@@ -214,14 +227,18 @@ Desde una perspectiva más técnica, Proof-of-Stake (PoS) es una alternativa al 
 
 
 # **Alternativas**
-
+TBD
 
 # **Impacto potencial y Dependencias**
-
+- Polygon Edge
+- JSON-RPC 
 
 # **Preguntas sin Resolver**
 - Gestión de la liquidez
 - Mecanimos de gobernanza
+- Tipos de Contratos
+- Tokenomics (Gobernanza, Minting (Acuñado), Burning (Quemado))
+- Colaterización y respaldo de prestamos.
 
 # **Referencias**
 
