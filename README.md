@@ -76,14 +76,14 @@ La solución contempla varios componentes, cada uno con propósitos específicos
 
 | Actor      | Componente |
 | ----------- | ----------- |
-| Estudiante      | SuperWallet       |
-| Asociados de Negocio   | BackOffice        |
-| Comercios en Alianza  | Administración Micrositio / Tienda Digital        |
+| Estudiante      | [SuperWallet](/SuperWallet/superwallet.md)       |
+| Asociados de Negocio   | [BackOffice](Backoffice/backoffice.md)        |
+| Comercios en Alianza  | [Administración Micrositio / Tienda Digital](/SiteBuilder/sitebuilder.md)        |
 | Entidades Financieras  | Administración Micrositio / Tienda de Servicios Financieros      |
-| Pasarelas de Pago  | Conector de Servicios de Pago       |
-| Exchanges de Cripto  | Conector de Exchange       |
-| Administración Central  | Backoffice de Admininistración       |
-| Nodo Procesamiento  | Processing Node       |
+| Pasarelas de Pago  | [Conector de Servicios de Pago](/PaymentGateway/paymentgateway.md)       |
+| Exchanges de Cripto  | [Conector de Exchange](/ExchangeConnector/exchangeconnector.md)      |
+| Administración Central  | [Backoffice de Admininistración](AdminCentral/admincentral.md)       |
+| Nodo Procesamiento  | [Processing Node](/NodoProcesamiento/processingnode.md)       |
 
 ## **Casos de Uso**
 ![image](UCoin%20Use%20cases.drawio.png)
