@@ -52,14 +52,40 @@ El enfoque y visión de UCoin es convertirse en una Crito moneda que podrá tran
 Para el montaje de este modelo de descentralización se vinculan a las universidades como validadores de los nuevos bloques (siendo ellos parte del modelo de gobernanza y usando un modelo de validación Proof of Stake) producto de las transacciones que se generen dentro de su nodo y en modalidad de apuesta (stake). En este sentido las universidades terminan siendo también auditores velando por la integridad y seguridad de los fondos que ellas mismas emplearon y usaron como garantía para poder ser validadores. 
 
 
-## **Característica Generales**
+# **Características**
+## **Generales UCoin**
 
 UCoin funcionará bajo las siguientes características:
 1. Sobre la cadena de bloques de *Ethereum*.
 2. ***Moneda Green*** que disminuye los costos y gastos energéticos utilizando un modelo de concenso distribuido que garantiza que los particpantes con mayor cantidad verificada de bloques o criptomonedas tengan la posibilidad de encontrar más. 
 3. ***Método de Concenso PoS*** para acelerar la velocidad transaccional y garantizar la participación de los nodos miembros de la red. En este sentido cada nodo (Uiversidad/Institución Educativa) se convierte en un validador escalando de manera orgánica en función del tamaño de su apuesta (stake), del tamaño de su comunidad y de la cantidad de trasacciones que se realizan en su interior. 
 4. ***Ecalado de Capa 2***. Es una solución de escalado de capa en donde las transacciones y procesos de blockchaoin pueden tener lugar independientemente de la capa 1 (la cadena principal), generando como ventaja usar soluciones fuera de la cadena principal sin generar un cambio estructural pues la capa 2 es agregada como capa adicional. Aquí gran parte de las trasnacciones que pasan por la capa 1 se transladan a la capa 2 en donde se realiza la prueba de concenso. La idea aquí es utilizar Zero Knowledge Rollups (ZK-Rollups). Estos ZK Rollups son smart contracts que escalan la red de Ehereum procesando multiples transferencias fuera de la cadena de blockchain principal y combinandolas en una sola transacción alcanzando un throughput de 2000 TPM (transacciones por segundo). Los Rollups de conocimiento cero retienen fondos en un smart contract y, una vez que se acepta la prueba de validez, las transacciones se confirman y los fondos están disponibles. El conocimiento cero significa que todos los verificadores pueden saber que tienen la misma información, sin que esta se revele.
+   
+## **Actores**
+En el negocio de UBankU partipan diferentes actores cada uno con diferentes alcances:
+- *Estudiantes* Representan el core del negocio al hacer dinámico el uso de los UCoins. Un estudiante puede comprar, recibir, enviar y cambiar UCoins a través de su Super Waller. Adicionalmente puede hacer swap de sus UCoins con otras monedas en el mercado Cripto.  
+- *Asociados de Negocio (Administración del Nodo)*. Administran y customizan la experiencia de los miembros de la comunidad universitaria que gestionan a través de alianzas con comercios y entidades que proveen servicios a los estudiantes y que construyen la vida universitaria. Pueden dar de alta y gestionar alianzas comerciales con comercios.
+- *Comercios en Alianza*. Hacen ofertas y promociones para las comunidades estudiantiles. Están adscritas a un nodo. Gracias a estas alianzas reciben pagos en UCoins a través de una interfaz o tienda digital configurada para sus promociones. 
+- *Entidades Financieras*. Proveen servicios de crédito a los miembros de la comunidad a partir del modelo de scoring administrado y gestionado por UbankU. 
+- *Pasarelas de Pago*. A través de este mecanismo los miembros de la comunidad pueden apostar por el UCoin haciendo depósitos en sus cuentas. 
+- *Exchanges de Cripto*. Están unidos a la red de Ethereum y permiten el intercambio (Swap) de UCoins con otros criptoactivos o incluso NTFs.
+- *Administración Central*. Aquí se realiza la administración completa del negocio. Permite la configuración y parametrización de nodos, gestión de recompensas, usuarios, etc.
 
+## **Componentes de la solución**
+La solución contempla varios componentes, cada uno con propósitos específicos y para actores concretos.
+
+| Actor      | Componente |
+| ----------- | ----------- |
+| Estudiante      | SuperWallet       |
+| Asociados de Negocio   | BackOffice        |
+| Comercios en Alianza  | Administración Micrositio / Tienda Digital        |
+| Entidades Financieras  | Administración Micrositio / Tienda de Servicios Financieros      |
+| Pasarelas de Pago  | Conector de Servicios de Pago       |
+| Exchanges de Cripto  | Conector de Exchange       |
+| Administración Central  | Backoffice de Admininistración       |
+
+## **Casos de Uso**
+![image](UCoin%20Use%20cases.drawio.png)
 
 # **Implementación**
 La implementación de UCoin puede llevarse a cabo sobre la red de Polygon (Matic), soportándose en Polygon Edge qué es un framework modular y extensible para la construcción de redes privadas o pública compatibles con Ethereum. 
