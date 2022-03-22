@@ -204,7 +204,7 @@ Implementa la interface con el el modulo de blockchain a través de:
 
 # **Riesgos**
 - Seguridad. JSON-RPC.
-
+- Reputación 
 
 # **Términos y Conceptos**
 ### - **Qué es una moneda estable?**
@@ -249,3 +249,12 @@ TBD
 - [Qué es el problema de escalabilidad en blockchain y por qué es importante?](https://wiki.lemon.me/que-es-el-problema-de-escalabilidad-en-blockchain-y-por-que-es-importante/)
 - [Layer-1 (L1) vs Layer-2 (L2): qué son y cómo prometen solucionar la escalabilidad de blockchain?](https://wiki.lemon.me/layer-1-l1-vs-layer-2-l2-que-son-y-como-prometen-solucionar-la-escalabilidad-de-blockchain/)
 - [Polygon Docs](https://edge-docs.polygon.technology/docs/)
+- [My Journey to Becoming a Validator on Ethereum 2.0](https://consensys.net/blog/blockchain-explained/my-journey-to-becoming-a-validator-on-ethereum-2-0/)
+- [Aries RFC 0050: Wallets](https://github.com/hyperledger/aries-rfcs/tree/main/concepts/0050-wallets)
+- [Wallets - Indy HIPE](https://docs.google.com/presentation/d/1d35TtEAP-f1tTh88XSZ2uQ2qnuPh6JIPluIWno_P3b0/edit#slide=id.g3a09c83097_2_19)
+- [Privacy Preserving Reputation Systems based on
+Blockchain and other Cryptographic Building
+Blocks: A Survey](https://perso.liris.cnrs.fr/omar.hasan/publications/hasan_2020_pprs.pdf)
+- [Diem Developers Documentation](https://developers.diem.com/docs/welcome-to-diem/)
+- [En La U - Whitepaper](https://www.enlau.co/whitepaper)
+- [Ethereum developer Docs](https://ethereum.org/en/developers/docs/ethereum-stack/)
