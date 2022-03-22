@@ -177,7 +177,15 @@ Implementa la interface con el el modulo de blockchain a través de:
 - Otros Componentes no menos importantes:
   - Minimal. funciona como un hub de interconexión entre todos los módulos de polygon.
   - Storage. Utiliza LevelDB para almancenamiento de Datos y almacen de datos en memoria. Esta es una capa de abstracción que permita realizar consultas y persistenca a nviel de BD.
-  
+
+# **Lenguaje de Implementación** 
+Go en versiones ~1.16 
+
+### Instalación plataforma para desarrolllo
+```
+go install github.com/0xPolygon/polygon-edge@develop
+```
+
 ##  **Atributos de Calidad**
 - **Escalabilidad**. Para resolver el problema de escalabilidad dentro de la plataforma de Polygon se puede utilizar Polygon Zero, una iniciativa que aúnque aún se encuentra en desarrollo, es funcional. Bajo este componente se transalada a una capa de Nodos PolygonZero las trasacciones en batch. Una vez estas son agreadas, polygon zero tranfiere el bloque a la capa 2 en donde se aplica el método de concenso que son agregados en bloques de pruebas que son generados en paralelo para ser enviados finalmente a la capa 1 de Ethereum. El siguiente gráfico muestra el proceso.
 ![image](Zero_Arch_b4c9ed0ad7.avif)
