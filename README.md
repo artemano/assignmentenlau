@@ -83,6 +83,7 @@ La solución contempla varios componentes, cada uno con propósitos específicos
 | Pasarelas de Pago  | Conector de Servicios de Pago       |
 | Exchanges de Cripto  | Conector de Exchange       |
 | Administración Central  | Backoffice de Admininistración       |
+| Nodo Procesamiento  | Processing Node       |
 
 ## **Casos de Uso**
 ![image](UCoin%20Use%20cases.drawio.png)
@@ -104,7 +105,9 @@ La arquitectura de esta alternativa contempla todo el stack de blockchain y est�
 ![image](SDK_diagram_97b9808b2c.png)
 
 #### Componentes
-
+##### Wallet
+TBD
+##### Nodo de Procesamiento
 - **JSON-RPC.** Implementa el API JSON RPC o capa que permite acceder al blockchain. El stack provee los mecanismos de interacción con clientes de la red que usan JSON-RPC que debe implementarse sobre servidores JSON-RPC con WSS (Web Socket Connection). 
 Implementa la interface con el el modulo de blockchain a través de:
     ```
@@ -227,6 +230,9 @@ go install github.com/0xPolygon/polygon-edge@develop
 
 # **Desafios/Retos**
 - Mantenimiento de la paridad con el dolar. Selección del método de balanceo.
+- Conversión moneda local a UCoins. UCoin en cada geografía tienen una equivalencia distinta.
+- Legalización Envío / Recepción de UCoins entre nodos de diferente geografía -
+- Tasas, Impuestos, Identidad tributaria
 
 # **Métricas**
 - Transacciones por Minuto.
